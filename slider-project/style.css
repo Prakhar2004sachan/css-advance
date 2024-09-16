@@ -317,6 +317,10 @@ header nav {
     margin-left: 0rem;
   }
 
+  .carousel .list::before{
+    border: none;
+  }
+
   .carousel .list .item .image {
     width: 100%;
     left: 0;
