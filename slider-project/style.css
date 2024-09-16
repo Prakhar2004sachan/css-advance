@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins';
+    font-size: 16px;
+    margin: 0;
+    background-color: #4f8b69;
+}
+
+:root{
+    --border-color: #fff5;
+    --w-image: 500px;
+    --calculate: calc(3/2);
+}
+
+header{
+    display: grid;
+    grid-template-columns: 80px 1fr calc(var(--w-image) * var(--calculate));
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .logo img{
+    width: 80%;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a{
+    color: #000;
+    font-weight: 400;
+}
+
+header nav ul{
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+header nav {
+    border-left: 1px solid var(--border-color);
+}
+
+.carousel{
+    margin-top: -80px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel .list{
+    height: 100%;
+    position: relative;
+}
+
+.carousel .list::before{
+    position: absolute;
+    width: var(--w-image);
+    height: 100%;
+    content: '';
+    top: 0;
+    left: calc(100%-calc(var(--w-image)*var(--calculate)));
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    z-index: 10;
+    pointer-events: none;
+}
