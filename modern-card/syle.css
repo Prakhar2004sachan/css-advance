@@ -159,3 +159,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (max-width: 300px) {
+    .card {
+        width: 260px;
+    } 
+    .card .image{
+        height: 15rem;
+    }
+}
