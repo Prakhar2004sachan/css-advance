@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #2a2a2a; */
+}
+
+:root {
+  --background-color: #1a1a1a;
+  --text-color: #eee;
+  --border-radius: 30px;
+}
+
+.card {
+  width: min(370px, 100%);
+  /* color: var(--text-color); */
+  position: relative;
+}
+
+.card .author{
+    background-color: var(--background-color);
+    width: 60%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
