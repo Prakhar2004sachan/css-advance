@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,12 @@
 }
 
 body {
-  /* background-color: #2a2a2a; */
+  background-color: #d0caca;
+  font-family: "Poppins";
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
@@ -16,14 +23,139 @@ body {
 
 .card {
   width: min(370px, 100%);
-  /* color: var(--text-color); */
+  color: var(--text-color);
   position: relative;
 }
 
-.card .author{
+.card .author {
+  background-color: var(--background-color);
+  width: 60%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 10px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card .author img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.card .image {
+  background-color: var(--background-color);
+  text-align: center;
+  border-top-right-radius: var(--border-radius);
+  padding-top: 30px;
+  height: 18rem;
+}
+
+.card .image img {
+  width: 75%;
+  transform: scaleX(-1) rotate(-5deg);
+}
+
+.card .image img:hover{
+    transform: scaleX(-1) rotate(-15deg) scale(1.1) translate(10px,-20px);
+    transition: 0.5s ease-in-out;
+}
+
+.card .info{
     background-color: var(--background-color);
-    width: 60%;
+    text-align: center;
+    padding: 30px;
+}
+
+.card .info .name{
+    font-size: 1.3em;
+}
+
+.card .more{
+    background-color: var(--background-color);
+    padding: 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.card .more .button{
+    display: flex;
+    gap: 5px;
+}
+
+.card .more .button button{
+    font-family: "Poppins";
+    color: var(--text-color);
+    background-color: #313131;
+    border: 1px solid #454545;
+    outline: none;
+}
+
+.card .more .button button:nth-child(1){
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.card .more .button button:nth-child(2){
+    padding: 0 20px;
+    border-radius: var(--border-radius);
+}
+
+.more .options ul{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #313131;
+    border-radius:20px;
+    width: max-content;
+    /* list-style: none; */
+}
+
+.card .more .options ul li{
+    background-color: var(--color);
+    width: 15px;
+    height: 15px;
+    list-style: none;
+    border-radius: 50%;
+}
+
+.card::before{
+    position:absolute;
+    background-color: transparent;
+    width: 40%;
     height: 70px;
-    display: grid;
-    grid-template-columns: 50px 1fr;
+    top:0;
+    right: 0;
+    content: "";
+    border-bottom-left-radius: var(--border-radius);
+    box-shadow: -30px 30px 0 var(--background-color);
+}
+
+.card::after{
+    background-color: var(--background-color);
+    content: " 🆕NEW ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(40% - 10px);
+    height: 60px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
